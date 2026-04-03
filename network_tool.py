@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-🔍 Network Troubleshooting Tool (Zscaler-Inspired)
+🔍 Network Troubleshooting Tool (Enterprise-Inspired)
 
 Production-Level CLI tool for diagnosing real-world network issues.
 Supports TCP/IP diagnostics including Ping, DNS resolution, Port Scanning,
