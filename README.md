@@ -32,7 +32,7 @@ python network_tool.py google.com github.com --ports 80 443
 
 ## 📸 Demo
 
-![Live Terminal Demo](Screenshot%202026-04-03%20042835.png)
+![Live Terminal Demo](Screenshot%202026-04-03%20055805.png)
 
 ---
 
