@@ -1,7 +1,9 @@
+# Simulates real-world network diagnostics used in enterprise environments
 #!/usr/bin/env python3
 """
-🔍 Zscaler Network Troubleshooting Tool
-Production CLI for Graduate Trainee Engineer role
+🔍 🔍 Network Troubleshooting Tool (Zscaler-Inspired)
+Production-Level Network Diagnostics CLI Tool
+# Designed to handle multiple targets efficiently using multithreading
 TCP/IP · DNS · Port Scanning · Traceroute · Multithreading
 """
 
