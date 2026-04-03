@@ -1,11 +1,14 @@
-# Simulates real-world network diagnostics used in enterprise environments
 #!/usr/bin/env python3
+
 """
-🔍 🔍 Network Troubleshooting Tool (Zscaler-Inspired)
-Production-Level Network Diagnostics CLI Tool
-# Designed to handle multiple targets efficiently using multithreading
-TCP/IP · DNS · Port Scanning · Traceroute · Multithreading
+🔍 Network Troubleshooting Tool (Zscaler-Inspired)
+
+Production-Level CLI tool for diagnosing real-world network issues.
+Supports TCP/IP diagnostics including Ping, DNS resolution, Port Scanning,
+and Traceroute with multithreading for efficient execution.
 """
+
+# Simulates real-world network diagnostics used in enterprise environments
 
 import socket
 import subprocess
@@ -93,7 +96,7 @@ def traceroute(host):
 # ---------------------- MAIN ----------------------
 def main():
     parser = argparse.ArgumentParser(
-        description="🔍 Zscaler Network Troubleshooting Tool"
+        description="Network Troubleshooting CLI Tool for TCP/IP Diagnostics"
     )
     parser.add_argument(
         'targets',
@@ -110,11 +113,12 @@ def main():
 
     args = parser.parse_args()
 
-    print("\n🔍 ZSCALER NETWORK DIAGNOSTICS\n")
+    print("\n🔍 NETWORK DIAGNOSTICS TOOL\n")
     print(f"Targets: {', '.join(args.targets)}")
     print(f"Ports: {args.ports}\n")
 
-    with ThreadPoolExecutor(max_workers=20) as executor:
+    max_threads = min(20, len(args.targets) * (len(args.ports) + 2)) 
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
         futures = []
 
         for target in args.targets:
